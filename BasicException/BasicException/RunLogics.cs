@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq.Expressions;
 using System.Text;
 
 namespace BasicException
@@ -8,73 +9,99 @@ namespace BasicException
     public class RunLogics
     {
         private Logic.Logic Logics;
+        private int StudentNum;
         public RunLogics()
         {
-
+            Console.WriteLine("Enter Student Number");
+            StudentNum = int.Parse(Console.ReadLine());
             Logics = new Logic.Logic();
+        }
+        public void TryReadIntParser(out int data)
+        {
+            while (!int.TryParse(Console.ReadLine(), out data))
+            {
+                throw new ScubaException(String.Format("Enter Valid int"), StudentNum);
+            }
         }
         public void RunLogic1()
         {
             int arrayLength;
             int[] arr;
             Console.WriteLine("Enter array Length please:");
-            while (!int.TryParse(Console.ReadLine(), out arrayLength))
+            try
             {
-                Console.WriteLine("Enter valid Integer only");
-            }
-            arr = new int[arrayLength];
-            for (int i = 0; i < arrayLength; i++)
-            {
-                Console.WriteLine("Enter Array numbers");
-                while (!int.TryParse(Console.ReadLine(), out arr[i]))
+                TryReadIntParser(out arrayLength);
+                arr = new int[arrayLength];
+                for (int i = 0; i < arr.Length; i++)
                 {
-                    Console.WriteLine("Enter valid Integer only");
+                    Console.WriteLine("Enter Array numbers");
+                    try
+                    {
+                        TryReadIntParser(out arr[i]);
+                    }
+                    catch (ScubaException e)
+                    {
+                        Console.WriteLine(String.Format("Hey {0}, You have an exception as ScubaException : {1}", e.StudentNum, e.Message));
+                    }
                 }
+                Console.WriteLine("The result of Logic1 is: " + Logics.Logic1(arr));
             }
-            Console.WriteLine("The result of Logic1 is: " + Logics.Logic1(arr));
+            catch(ScubaException e)
+            {
+                Console.WriteLine(String.Format("Hey {0}, You have an exception as ScubaException : {1}", e.StudentNum, e.Message));
+            }
+
+
+        }
+        public void TryReadStringParser(out string data)
+        {
+            while (string.IsNullOrEmpty(data = Console.ReadLine())) { throw new ScubaException(String.Format("Enter Valid file name"), StudentNum); }
+
         }
 
         public void RunLogic2()
         {
             string inFileName, outFileName;
-            Console.WriteLine("Hey!, Whats your student number?");
-            Console.WriteLine("enter input file name");
-            while (string.IsNullOrEmpty(inFileName = Console.ReadLine())) { throw new ScubaException("Enter Valid file name"); }
-            Console.WriteLine("enter output file name");
-            while (string.IsNullOrEmpty(outFileName = Console.ReadLine())) { throw new ScubaException("Enter Valid file name"); }
             try
             {
-                Logics.Logic2(inFileName, outFileName);
+                Console.WriteLine("enter input file name");
+                TryReadStringParser(out inFileName);
+                Console.WriteLine("enter output file name");
+                TryReadStringParser(out outFileName);
+                try
+                {
+                    Logics.Logic2(inFileName, outFileName);
+                }
+                catch (IOException e)
+                {
+                    Console.WriteLine(e.Message.ToString());
+                }
             }
-            catch (ScubaException se)
+            catch(ScubaException e)
             {
-                Console.WriteLine(se.Message.ToString() + se.StudentNum);
-                throw;
-            }
-            catch (IOException e)
-            {
-                Console.WriteLine(e.Message.ToString());
-                throw;
+                Console.WriteLine(String.Format("Hey {0}, You have an exception as ScubaException : {1}", e.StudentNum, e.Message));
             }
         }
         public void RunLogic3()
     {
         string data;
-        while (string.IsNullOrEmpty(data = Console.ReadLine())) { throw new ScubaException("Enter Valid file name"); }
-        try
-        {
-            Logics.Logic3(data);
-        }
-        catch (OverflowException e)
-        {
-            Console.WriteLine(e.Message.ToString());
-            throw;
-        }
-        catch (ScubaException se)
-        {
-            Console.WriteLine(se.Message.ToString() + se.StudentNum);
-            throw;
-        }
+            try
+            {
+                TryReadStringParser(out data);
+                try
+                {
+                    Logics.Logic3(data);
+                }
+                catch (OverflowException e)
+                {
+                    Console.WriteLine(e.Message.ToString());
+                }
+            }
+            catch (ScubaException e)
+            {
+                Console.WriteLine(String.Format("Hey {0}, You have an exception as ScubaException : {1}", e.StudentNum, e.Message));
+            }
+           
     }
 
     public void RunLogic4()
@@ -82,33 +109,46 @@ namespace BasicException
         string data1;
         int data2;
         long data3;
-        Console.WriteLine("Enter 1 string : ");
-        while (string.IsNullOrEmpty(data1 = Console.ReadLine())) { throw new ScubaException("Enter Valid string"); }
-        while (!int.TryParse(Console.ReadLine(), out data2))
-        {
-            throw new ScubaException("Enter Valid int");
-        }
-        Console.WriteLine("Enter 1 Long number: ");
-        while (!long.TryParse(Console.ReadLine(), out data3))
-        {
-            throw new ScubaException("Enter Valid long");
-        }
-        try
-        {
-            Logics.Logic4(data1, data2, data3);
-        }
-        catch (ScubaException se)
-        {
-            Console.WriteLine(se.Message.ToString() + se.StudentNum);
-            throw;
-        }
+            try
+            {
+                Console.WriteLine("Enter 1 string : ");
+                TryReadStringParser(out data1);
+                try
+                {
+                    Console.WriteLine("Enter int number");
+                    TryReadIntParser(out data2);
+                    while (!long.TryParse(Console.ReadLine(), out data3))
+                    {
+                        throw new ScubaException(String.Format("Enter Valid long"), StudentNum);
+                    }
+                    try
+                    {
+                        Logics.Logic4(data1, data2, data3);
+                    }
+                    catch (ScubaException se)
+                    {
+                        Console.WriteLine(se.Message.ToString() + se.StudentNum);
+                        throw;
+                    }
+                }
+                catch (ScubaException e)
+                {
+                    Console.WriteLine(String.Format("Hey {0}, You have an exception as ScubaException : {1}", e.StudentNum, e.Message));
+                }
+                Console.WriteLine("Enter 1 Long number: ");
+
+            }
+            catch (ScubaException e)
+            {
+                Console.WriteLine(String.Format("Hey {0}, You have an exception as ScubaException : {1}", e.StudentNum, e.Message));
+            }
 
     }
     public void RunLogic5()
     {
         string dllfile;
         Console.WriteLine("Enter dll file : ");
-        while (string.IsNullOrEmpty(dllfile = Console.ReadLine())) { throw new ScubaException("Enter Valid string"); }
+                while (string.IsNullOrEmpty(dllfile = Console.ReadLine())) { throw new ScubaException(String.Format("Enter Valid string"), StudentNum); }
         try
         {
             Logics.Logic5(dllfile);

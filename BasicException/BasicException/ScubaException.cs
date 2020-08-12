@@ -7,6 +7,6 @@ namespace BasicException
     public class ScubaException : Exception
     {
         public int StudentNum { get; }
-        public ScubaException(string message) : base(message) { StudentNum = int.Parse(Console.ReadLine()); Console.WriteLine($"Hey {StudentNum}, You have an exception as ScubaException"); }
+        public ScubaException(string message, int studentnum) : base(message) { }
     }
 }

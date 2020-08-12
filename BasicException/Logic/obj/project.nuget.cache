@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "nso0eumZg8MBCI+ZaxN2pnBqLype2Guj9whXI49vNBq7Omoc43cXBUVEGm+/MT4EAMgMmSpAy1/si7+I9y8gFg==",
+  "dgSpecHash": "uJ08CZ/OVasFv3ob601ZGELUVijhgxMXq0h1aZe+l44IZMbEO66R3lTSMq6Y5OvB/hJpS+q10FCDwMWxVvRXSA==",
   "success": true,
-  "projectFilePath": "C:\\Code\\BasicException\\Logic\\Logic.csproj",
+  "projectFilePath": "C:\\Code\\BasicException\\BasicException\\Logic\\Logic.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

@@ -10,6 +10,7 @@ namespace BasicException
         static void Main(string[] args)
         {
             RunLogics rl = new RunLogics();
+            rl.RunLogic1();
         }
     }
 }

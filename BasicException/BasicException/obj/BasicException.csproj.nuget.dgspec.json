@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Code\\BasicException\\BasicException\\BasicException.csproj": {}
+    "C:\\Code\\BasicException\\BasicException\\BasicException\\BasicException.csproj": {}
   },
   "projects": {
-    "C:\\Code\\BasicException\\BasicException\\BasicException.csproj": {
+    "C:\\Code\\BasicException\\BasicException\\BasicException\\BasicException.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Code\\BasicException\\BasicException\\BasicException.csproj",
+        "projectUniqueName": "C:\\Code\\BasicException\\BasicException\\BasicException\\BasicException.csproj",
         "projectName": "BasicException",
-        "projectPath": "C:\\Code\\BasicException\\BasicException\\BasicException.csproj",
+        "projectPath": "C:\\Code\\BasicException\\BasicException\\BasicException\\BasicException.csproj",
         "packagesPath": "C:\\Users\\thelittlecitizen11\\.nuget\\packages\\",
-        "outputPath": "C:\\Code\\BasicException\\BasicException\\obj\\",
+        "outputPath": "C:\\Code\\BasicException\\BasicException\\BasicException\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\thelittlecitizen11\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -27,8 +27,8 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "C:\\Code\\BasicException\\Logic\\Logic.csproj": {
-                "projectPath": "C:\\Code\\BasicException\\Logic\\Logic.csproj"
+              "C:\\Code\\BasicException\\BasicException\\Logic\\Logic.csproj": {
+                "projectPath": "C:\\Code\\BasicException\\BasicException\\Logic\\Logic.csproj"
               }
             }
           }
@@ -66,14 +66,14 @@
         }
       }
     },
-    "C:\\Code\\BasicException\\Logic\\Logic.csproj": {
+    "C:\\Code\\BasicException\\BasicException\\Logic\\Logic.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Code\\BasicException\\Logic\\Logic.csproj",
+        "projectUniqueName": "C:\\Code\\BasicException\\BasicException\\Logic\\Logic.csproj",
         "projectName": "Logic",
-        "projectPath": "C:\\Code\\BasicException\\Logic\\Logic.csproj",
+        "projectPath": "C:\\Code\\BasicException\\BasicException\\Logic\\Logic.csproj",
         "packagesPath": "C:\\Users\\thelittlecitizen11\\.nuget\\packages\\",
-        "outputPath": "C:\\Code\\BasicException\\Logic\\obj\\",
+        "outputPath": "C:\\Code\\BasicException\\BasicException\\Logic\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\thelittlecitizen11\\AppData\\Roaming\\NuGet\\NuGet.Config",

@@ -10,3 +10,16 @@ C:\Code\BasicException\Logic\obj\Debug\netcoreapp3.1\Logic.csproj.CoreCompileInp
 C:\Code\BasicException\Logic\obj\Debug\netcoreapp3.1\Logic.dll
 C:\Code\BasicException\Logic\obj\Debug\netcoreapp3.1\Logic.pdb
 C:\Code\BasicException\Logic\obj\Debug\netcoreapp3.1\Logic.genruntimeconfig.cache
+C:\Code\BasicException\BasicException\Logic\bin\Debug\netcoreapp3.1\Logic.exe
+C:\Code\BasicException\BasicException\Logic\bin\Debug\netcoreapp3.1\Logic.deps.json
+C:\Code\BasicException\BasicException\Logic\bin\Debug\netcoreapp3.1\Logic.runtimeconfig.json
+C:\Code\BasicException\BasicException\Logic\bin\Debug\netcoreapp3.1\Logic.runtimeconfig.dev.json
+C:\Code\BasicException\BasicException\Logic\bin\Debug\netcoreapp3.1\Logic.dll
+C:\Code\BasicException\BasicException\Logic\bin\Debug\netcoreapp3.1\Logic.pdb
+C:\Code\BasicException\BasicException\Logic\obj\Debug\netcoreapp3.1\Logic.csprojAssemblyReference.cache
+C:\Code\BasicException\BasicException\Logic\obj\Debug\netcoreapp3.1\Logic.AssemblyInfoInputs.cache
+C:\Code\BasicException\BasicException\Logic\obj\Debug\netcoreapp3.1\Logic.AssemblyInfo.cs
+C:\Code\BasicException\BasicException\Logic\obj\Debug\netcoreapp3.1\Logic.csproj.CoreCompileInputs.cache
+C:\Code\BasicException\BasicException\Logic\obj\Debug\netcoreapp3.1\Logic.dll
+C:\Code\BasicException\BasicException\Logic\obj\Debug\netcoreapp3.1\Logic.pdb
+C:\Code\BasicException\BasicException\Logic\obj\Debug\netcoreapp3.1\Logic.genruntimeconfig.cache

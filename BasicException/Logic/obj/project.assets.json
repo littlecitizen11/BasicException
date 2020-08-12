@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Code\\BasicException\\Logic\\Logic.csproj",
+      "projectUniqueName": "C:\\Code\\BasicException\\BasicException\\Logic\\Logic.csproj",
       "projectName": "Logic",
-      "projectPath": "C:\\Code\\BasicException\\Logic\\Logic.csproj",
+      "projectPath": "C:\\Code\\BasicException\\BasicException\\Logic\\Logic.csproj",
       "packagesPath": "C:\\Users\\thelittlecitizen11\\.nuget\\packages\\",
-      "outputPath": "C:\\Code\\BasicException\\Logic\\obj\\",
+      "outputPath": "C:\\Code\\BasicException\\BasicException\\Logic\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\thelittlecitizen11\\AppData\\Roaming\\NuGet\\NuGet.Config",
